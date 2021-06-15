@@ -1,0 +1,58 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Foodie-Payment</title>
+    <link rel="stylesheet" href="form.css"/>
+</head>
+<body>
+    <div class="deliver">
+        <h1>Select a Delivery Address!</h1>
+        <hr color="#FF4600"/>
+        <h2>Add a new Address</h2>
+        <h4>Full name (First and Last name):</h4>
+        <input type="text" name="fname" id="fname"/>
+    <h4>Mobile Number:</h4>
+    <input type="text" name="cell" id="cell" placeholder="10-digit mobile number without prefixes" maxlength="10" minlength="10"/>
+    <p>Could be used to assist delivery</p>
+    <h4>Flat/House no./Building/Company/Aparment:</h4>
+    <input type="text" name="houseno" id="houseno"/>
+    <h4>Area,colony,street,sector:</h4>
+    <input type="text" name="colony" id="colony"/>
+    </div>
+    <div class = "payment">
+    <div class="left">
+        <h1>Select a payment method!</h1>
+        <p>Get Instant refund on cancellations | Zero payment failures</p>
+        <div class="paymentdiv"/>
+            <h2>Choose among following:</h2>
+            <div class="input">
+                <input type="radio" id="cards" name="paymentopt" value="cards"/>
+                <label for="cards">Add Debit/Credit/ATM Card</label>
+                <br/>
+                <input type="radio" id="neft" name="paymentopt" value="neft"/>
+                <label for="neft">Net Banking</label>
+                <br/>
+                <input type="radio" id="upis" name="paymentopt" value="upis"/>
+                <label for="upis">Other UPI Apps (Like Phone Pe!)</label>
+                <br/>
+                <input type="radio" id="cod" name="paymentopt" value="cod"/>
+                <label for="cod">Cash on delivery</label>
+            </div>
+            <hr color="#FF4600"/>
+            <div class="discount">
+                <h2>Have vouchers?</h2>
+                <h4>Enter voucher code:</h4>
+                <p>You are just type away from fetching your discount!</p>
+                <input type="text" name="voucher"/>
+            </div>
+        </div> 
+        <div class="right">
+            <h6>Thanks for shopping with us!</h6>
+            <a href="index.html"><button>Continue</button></a>
+        </div>
+    </div>
+</body>
+</html>
