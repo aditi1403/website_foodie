@@ -58,4 +58,4 @@ function setCookie(cname,cvalue,exdays) {
        }
     }
   }
-window.location.replace("http://www.w3schools.com");
+// window.location.replace("http://www.w3schools.com");
