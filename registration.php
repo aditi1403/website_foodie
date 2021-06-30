@@ -9,8 +9,8 @@
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $commentErr= $numberErr= "";
-$name = $email = $gender = $comment = $number= "";
+$nameErr = $emailErr = $genderErr = $numberErr= "";
+$name = $email = $gender = $number= "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -41,12 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $numberErr = "Invalid number";
     }
   }
-    if (empty($_POST["comment"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
-
+  
   if (empty($_POST["gender"])) {
     $genderErr = "Gender is required";
   } else {
@@ -62,7 +57,7 @@ function test_input($data) {
 }
 ?>
 
-<h2>Customer Feedback</h2>
+<h2>Customer Registration</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -73,9 +68,6 @@ function test_input($data) {
   <br><br>
   Mobile Number: <input type="text" name="number" value="<?php echo $number;?>">
   <span class="error">* <?php echo $numberErr;?></span>
-  <br><br>
-  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <span class="error">* <?php echo $commentErr;?></span>
   <br><br>
   Gender:
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
@@ -93,8 +85,8 @@ echo $email;
 echo "<br>";
 echo $number;
 echo "<br>";
-echo $comment;
-echo "<br>";
+// echo $comment;
+// echo "<br>";
 echo $gender;
 ?>
 
